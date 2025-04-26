@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simpósio Teatro de Bonecos do Nordeste</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .hero {
+      background-color: #e0f2f7;
+      color: #1a237e;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #ff9800;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f57c00;
+    }
+
+    section {
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #1a237e;
+      text-align: center;
+      margin-top: 0;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .benefits-list li .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #ffc107;
+      border-radius: 50%;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      font-size: 0.8em;
+    }
+
+    .important {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* Carrossel */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 600px;
+      height: 400px;
+      margin: 20px auto;
+    }
+
+    .carousel-slide {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1.5em;
+      z-index: 10;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .carousel-prev:hover, .carousel-next:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-prev:focus, .carousel-next:focus {
+      outline: 2px solid #ff9800;
+    }
+
+    .carousel-prev {
+      left: 10px;
+    }
+
+    .carousel-next {
+      right: 10px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Simpósio O Teatro de Bonecos como Patrimônio Cultural do Nordeste</h1>
+      <p class="subtitle">Explore a riqueza e a tradição do teatro de bonecos nordestino em um evento imperdível com apoio do Iphan/CE e ABTB.</p>
+      <a href="#" class="button">Inscreva-se Agora!</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>Sobre o Simpósio</h2>
+      <p>O Simpósio convida você a uma imersão profunda em uma das manifestações culturais mais genuínas e expressivas do Brasil...</p>
+      <!-- conteúdo encurtado para foco no carrossel -->
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <div class="container">
+      <h2>Conheça o Teatro de Bonecos em Imagens</h2>
+      <div class="carousel-container" role="region" aria-label="Carrossel de imagens">
+        <div class="carousel-slide active" aria-hidden="false">
+          <img src="./src/img/defs.jpg" alt="Teatro de Bonecos 1" />
+        </div>
+        <div class="carousel-slide" aria-hidden="true">
+          <img src="./src/img/cangaceiros.jpeg" alt="Teatro de Bonecos 2" />
+        </div>
+        <div class="carousel-slide" aria-hidden="true">
+          <img src="./src/img/Teatro.jpg" alt="Teatro de Bonecos 3" />
+        </div>
+        <button class="carousel-prev" aria-label="Slide anterior">&#10094;</button>
+        <button class="carousel-next" aria-label="Próximo slide">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="container">
+      <h2>Assista um pouco do Teatro de Bonecos</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HPoIshRMNWQ?si=WXKbVP9SlyOZLmLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Realização: [Nome da Organização Principal]</p>
+      <p>Em parceria com: ABTB</p>
+      <p>Apoio: Iphan/CE</p>
+      <p>Contato: [Email ou Telefone]</p>
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+   
+  </script>
+</body>
+</html>
